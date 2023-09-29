@@ -16,6 +16,7 @@ class CustomAuthToken(ObtainAuthToken):
         response = super(CustomAuthToken, self).post(request, *args, **kwargs)
         token = response.data['token']
         return Response({'token': token})
+        
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
