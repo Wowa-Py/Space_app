@@ -20,12 +20,10 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.routers import DefaultRouter
-from users.views import UserViewSet
+from users.views import UserViewSet, create_user
 
 from rest_framework.authtoken import views
 from users.views import CustomAuthToken
-
-from.views import create_user
 
 router = DefaultRouter()
 router.register('api/users', UserViewSet)
